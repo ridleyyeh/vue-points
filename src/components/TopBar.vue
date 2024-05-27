@@ -1,10 +1,20 @@
-<script setup></script>
+<script setup>
+
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+const navigateTo = (path) => {
+    router.push(path);
+};
+
+
+</script>
 
 <template>
 
     <div class="header">
         <div class="logo">
-            <a href="">
+            <a href="#" @click="navigateTo('/')">
                 <img src="@/assets/logo.png" alt="">
             </a>
 
@@ -12,15 +22,15 @@
         <img src="../assets/topbar.png" alt="">
 
         <div class="btns">
-            <div class="btn-1">
+            <div class="btn-1" @click="navigateTo('/MyCredit')">
                 <img src="@/assets/dollar_sign.png" alt="">
                 <p>我的點數</p>
             </div>
-            <div class="btn-2">
+            <div class="btn-2" @click="navigateTo('/CreditRecord')">
                 <img src="@/assets/paper_sign.png" alt="">
                 <p>點數紀錄</p>
             </div>
-            <div class="btn-3">
+            <div class="btn-3" @click="navigateTo('/RulesandPolicy')">
                 <img src="@/assets/paper.png" alt="">
                 <p>規則與條款</p>
             </div>
