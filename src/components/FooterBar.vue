@@ -18,9 +18,6 @@
 
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
 
     img {
         width: 100%;

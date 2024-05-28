@@ -47,11 +47,13 @@ const navigateTo = (path) => {
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .header {
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
+    // border: 2px solid red;
 
     .logo {
         padding: 1rem;
@@ -60,6 +62,8 @@ const navigateTo = (path) => {
 
     img {
         width: 100%;
+        position: relative;
+
     }
 
     .btns {
@@ -70,12 +74,7 @@ const navigateTo = (path) => {
         align-items: center;
         position: absolute;
         left: 35%;
-        top: 85%;
-
-
-
-
-
+        top: 51%;
 
         .btn-1 {
             background-color: rgb(255, 98, 79);
