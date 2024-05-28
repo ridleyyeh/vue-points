@@ -64,7 +64,7 @@ onMounted(() => {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 /* 每行显示三张图片 */
-                grid-gap: 10px;
+                grid-gap: 15px;
 
                 img {
                     width: 100%;

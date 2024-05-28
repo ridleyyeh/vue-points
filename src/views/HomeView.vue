@@ -4,6 +4,7 @@ import FooterBar from "@/components/FooterBar.vue"
 import MissionEarnCoins from "@/components/MissionEarnCoins.vue"
 import CoinExchangeGift from "@/components/CoinExchangeGift.vue"
 import AdElement from "@/components/AdElement.vue"
+import WarningSign from "@/components/WarningSign.vue"
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import AdElement from "@/components/AdElement.vue"
         <MissionEarnCoins />
         <CoinExchangeGift />
         <AdElement />
+        <WarningSign />
       </div>
     </div>
     <FooterBar />
