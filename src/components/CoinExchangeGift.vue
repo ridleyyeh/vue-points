@@ -1,17 +1,17 @@
 <template>
     <div class="container">
         <div class="gift-logo">
-            <img src="@/assets/gift.png" alt="">
+            <img src="@/assets/gift.png" alt="Gift Logo">
         </div>
         <div class="gift">
             <div class="gift-pic-container">
                 <div class="gift-pic">
-                    <img src="@/assets/food-voucher1.png" alt="">
-                    <img src="@/assets/food-voucher2.png" alt="">
-                    <img src="@/assets/food-voucher1.png" alt="">
-                    <img src="@/assets/food-voucher2.png" alt="">
-                    <img src="@/assets/food-voucher1.png" alt="">
-                    <img src="@/assets/food-voucher2.png" alt="">
+                    <img src="@/assets/food-voucher1.png" alt="Food Voucher 1">
+                    <img src="@/assets/food-voucher2.png" alt="Food Voucher 2">
+                    <img src="@/assets/food-voucher1.png" alt="Food Voucher 1">
+                    <img src="@/assets/food-voucher2.png" alt="Food Voucher 2">
+                    <img src="@/assets/food-voucher1.png" alt="Food Voucher 1">
+                    <img src="@/assets/food-voucher2.png" alt="Food Voucher 2">
                 </div>
             </div>
         </div>
@@ -23,12 +23,26 @@ import { onMounted } from 'vue';
 import StickySidebar from 'sticky-sidebar';
 
 onMounted(() => {
-    new StickySidebar('.gift-pic-container', {
-        containerSelector: '.gift',
-        innerWrapperSelector: '.gift-pic-container',
-        topSpacing: 20,
-        bottomSpacing: 20
-    });
+    setTimeout(() => {
+        const container = document.querySelector('.gift');
+        const innerWrapper = document.querySelector('.gift-pic-container');
+
+
+        if (container && innerWrapper) {
+            const sidebar = new StickySidebar(innerWrapper, {
+                containerSelector: '.gift',
+                innerWrapperSelector: '.gift-pic-container',
+                topSpacing: 20,
+                bottomSpacing: 20
+            });
+
+            if (!sidebar.isSidebarInitialized) {
+                console.error('StickySidebar initialization failed');
+            }
+        } else {
+            console.error('Container or inner wrapper not found');
+        }
+    }, 100); // 延遲 100 毫秒解決問題的原因主要是與 DOM 渲染和資源加載順序有關。在 onMounted 生命週期中立即執行初始化代碼時，可能會在 DOM 尚未完全渲染或資源尚未完全加載完畢的情況下執行，導致初始化失敗。延遲 100 毫秒給予瀏覽器足夠的時間完成這些操作，從而保證 StickySidebar 初始化時能夠找到並正確處理需要的元素。
 });
 </script>
 
@@ -54,16 +68,15 @@ onMounted(() => {
 
         .gift-pic-container {
             width: 100%;
-            /* 确保容器宽度适合内容 */
             max-height: 400px;
             overflow-y: auto;
-            /* 启用纵向滚动 */
             margin-right: 20px;
+            position: relative;
+
 
             .gift-pic {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                /* 每行显示三张图片 */
                 grid-gap: 15px;
 
                 img {
