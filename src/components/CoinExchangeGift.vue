@@ -78,6 +78,7 @@ onMounted(() => {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-gap: 15px;
+                margin: 1rem 0;
 
                 img {
                     width: 100%;
