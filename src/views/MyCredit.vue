@@ -3,6 +3,7 @@ import TopBar from "@/components/TopBar.vue"
 import FooterBar from "@/components/FooterBar.vue"
 import CreditRecord from "@/components/CreditRecord.vue"
 import DescriptionSign from "@/components/DescriptionSign.vue"
+import AdElement from "@/components/AdElement.vue"
 </script>
 
 <template>
@@ -10,11 +11,13 @@ import DescriptionSign from "@/components/DescriptionSign.vue"
     <div class="homeview">
         <TopBar />
         <div class="wrap">
+
             <div class="container">
                 <CreditRecord />
                 <DescriptionSign />
-
+                <AdElement />
             </div>
+
         </div>
         <FooterBar />
     </div>

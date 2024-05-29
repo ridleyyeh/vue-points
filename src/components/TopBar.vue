@@ -58,12 +58,19 @@ body {
     .logo {
         padding: 1rem;
         width: 185px;
+
+        a {
+            &:hover {
+                background-color: white;
+            }
+        }
+
+
     }
 
     img {
         width: 100%;
         position: relative;
-
     }
 
     .btns {
