@@ -15,4 +15,14 @@
     align-items: center;
     margin-top: 4rem;
 }
+
+@media (max-width:450px) {
+    .advertisement {
+        margin-bottom: 2rem;
+
+        img {
+            width: 75%;
+        }
+    }
+}
 </style>

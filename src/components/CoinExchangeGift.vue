@@ -88,4 +88,40 @@ onMounted(() => {
         }
     }
 }
+
+
+@media (max-width:450px) {
+    .container {
+        max-width: 450px;
+
+        .gift-logo {
+            width: 450px;
+            padding-left: 3rem;
+
+
+            img {
+                width: 40%;
+            }
+        }
+
+        .gift {
+            width: 410px;
+
+            .gift-pic-container {
+
+                height: 200px;
+
+                .gift-pic {
+
+
+
+                    img {
+                        // margin: 5rem 0;
+                        width: 95px;
+                    }
+                }
+            }
+        }
+    }
+}
 </style>

@@ -82,7 +82,7 @@ onBeforeUnmount(() => {
                 .content {
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    justify-content: space-around;
 
                     p {
                         font-size: 12px;
@@ -108,6 +108,32 @@ onBeforeUnmount(() => {
                 border: none;
                 border-top: 1px solid rgba(0, 0, 0, 0.1);
                 margin: 1rem 0;
+            }
+        }
+    }
+}
+
+@media (max-width:450px) {
+    .container {
+        max-width: 450px;
+
+        .mission-logo {
+            width: 450px;
+            height: 45px;
+            // border: 2px solid red;
+
+            img {
+                width: 35%;
+            }
+        }
+
+        .mission {
+            margin: 0 1rem;
+            width: 415px;
+            height: 260px;
+
+            .mission-content {
+                // border: 2px solid red;
             }
         }
     }

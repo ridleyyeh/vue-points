@@ -53,6 +53,7 @@ body {
 
 .header {
     width: 100%;
+    position: relative;
     // border: 2px solid red;
 
     .logo {
@@ -81,7 +82,7 @@ body {
         align-items: center;
         position: absolute;
         left: 35%;
-        top: 51%;
+        top: 85%;
 
         .btn-1 {
             background-color: rgb(255, 98, 79);
@@ -168,6 +169,48 @@ body {
 
         }
 
+    }
+}
+
+
+@media (max-width:450px) {
+    .header {
+        .logo {
+            // display: none;
+        }
+
+        img {
+            display: none;
+        }
+
+
+        .btns {
+            left: 18%;
+            top: -90%;
+            justify-content: flex-start;
+            width: 300px;
+            height: 50px;
+
+
+            .btn-1,
+            .btn-2,
+            .btn-3 {
+
+                width: 92px;
+                height: 30px;
+                margin: 0 5px;
+
+                img {
+                    width: 20px;
+                    margin-right: 0rem;
+                    display: block; //否則圖片會不見
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
     }
 }
 </style>

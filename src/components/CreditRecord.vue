@@ -25,4 +25,32 @@
         margin-top: 2rem
     }
 }
+
+
+@media(max-width:450px) {
+
+    .container {
+        max-width: 450px;
+
+        .record {
+            max-width: 450px;
+            width: 450px;
+
+            .coin {
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .wutai {
+
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
 </style>

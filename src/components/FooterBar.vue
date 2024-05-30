@@ -26,4 +26,16 @@
     }
 
 }
+
+
+@media (max-width:450px) {
+
+    .footer {
+        width: 450px;
+
+        img {
+            transform: scale(2);
+        }
+    }
+}
 </style>

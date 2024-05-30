@@ -34,4 +34,12 @@
         font-weight: 600;
     }
 }
+
+
+@media (max-width:450px) {
+    .description {
+        width: 420px;
+        margin: 2rem auto
+    }
+}
 </style>
