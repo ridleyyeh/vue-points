@@ -3,11 +3,11 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
+
+
 const navigateToRewardPoint = () => {
     router.push('/rewardpoints')
 }
-
-
 const navigateToRedeemPoint = () => {
     router.push('/redeempoints')
 }
@@ -88,6 +88,19 @@ const navigateToRedeemPoint = () => {
                 font-size: 20px;
                 font-weight: 900;
             }
+        }
+    }
+}
+
+
+@media (max-width:450px) {
+    .btns {
+        // border: 2px solid red;
+        width: 300px;
+
+        .active {
+
+            justify-content: space-evenly;
         }
     }
 }

@@ -27,13 +27,11 @@ import AdElement from "@/components/AdElement.vue"
 
         <TopBar />
         <div class="wrap">
-
             <div class="container">
                 <CreditRecord />
                 <DescriptionSign />
                 <AdElement />
             </div>
-
         </div>
         <FooterBar />
     </div>

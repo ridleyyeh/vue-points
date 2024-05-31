@@ -158,4 +158,20 @@ import PointBtn from "@/components/PointBtn.vue"
         }
     }
 }
+
+
+@media (max-width: 450px) {
+    .rewardPoints {
+
+        .wrap {
+
+            .container {
+                max-width: 450px;
+                width: 450px;
+                // border: 2px solid red;
+                padding: 2rem;
+            }
+        }
+    }
+}
 </style>
