@@ -20,7 +20,7 @@ const navigateToIndex = () => {
     <!--     rwd  pseudo elements starts here -->
 
     <div class="rwdHeader" style="display: none;">
-      <h1 @click="navigateToIndex">點數專區</h1>
+      <h1 @click="navigateToIndex" style="cursor: pointer;">點數專區</h1>
       <div class="toolbar">
         <img src="@/assets/toolbar.png" alt="">
       </div>
